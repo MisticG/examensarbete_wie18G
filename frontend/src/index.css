@@ -1,10 +1,19 @@
 html, body {
   height: 100%;
   margin: 0;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 1em;
+  font-weight: normal;
   line-height: 1.8em;
-  color: #666
+  color:rgba(0, 0, 0, 0.95);
+  background-color: rgba(255, 255, 255, 0.95);
+  font-family: 'Dancing_Script';
+}
+
+h1, h2 {
+  font-family: 'Dancing_Script';
+  font-size: 4rem;
+  font-weight: normal;
+  margin-bottom: 1em;
 }
 
 .header_bg0, .border_bg, .border_bg2 {
@@ -28,13 +37,18 @@ html, body {
 }
 
 .border_bg {
-  min-height: 270px;
+  min-height: 250px;
   opacity: 0.4;
 }
 
 .section {
   text-align: center;
-  padding:50px 80px;
+  padding: 1em 6em 4em;
+  margin: 2em 4em;
+}
+
+.section p {
+  font-size: 1.7em;
 }
 
 .header_text {
@@ -59,10 +73,20 @@ html, body {
   .header_bg0, .border_bg, .border_bg2 {
     background-attachment: scroll;
   }
+
+  .section {
+    margin: 0.7em 1em;
+    padding: 1em 1em 3em;
+  } 
+
+  h1, h2 {
+    margin-bottom: 0.5em;
+    font-size: 3rem;
+  }
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: -apple-system, BlinkMacSystemFont, 'Dancing_Script', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -77,4 +101,9 @@ code {
 @font-face {
   font-family: 'Montserrat';
   src: local('Montserrat'), url(./fonts/Montserrat/Montserrat-Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Dancing_Script';
+  src: local('Dancing_Script'), url(./fonts/Dancing_Script/static/DancingScript-Regular.ttf) format('truetype');
 }
