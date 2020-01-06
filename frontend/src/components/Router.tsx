@@ -5,7 +5,7 @@ export default class LocalRouter extends Component {
     render() {
         return (
             <Router>
-                <div className="ui container fixed center aligned">
+                <div className="ui container center aligned">
                     <div className="ui five big item secondary menu container" style={naviStyle}>
                         <Link to="/" className="item">HEM</Link>
                         <Link to="/gallery" className="item">GALLERI</Link>

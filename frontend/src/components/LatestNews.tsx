@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import newsImg from '../assets/images/bukett_1.jpg';
 
 export default class LatestNews extends Component {
-    //isTabletOrLess = useMediaQuery({ query: '(max-width: 1224px)' });
     
     render() {
         return (
@@ -39,8 +38,6 @@ const outer: React.CSSProperties = {
 }
 
 const news: React.CSSProperties = {
-    /*margin: "1em",
-    padding: "2em",*/
     fontFamily: "Dancing_Script"
 }
 
