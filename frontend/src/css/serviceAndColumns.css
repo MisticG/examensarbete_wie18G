@@ -1,0 +1,28 @@
+/*ServiceSection component CSS*/
+.section.servicesAndOffers {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.columnsInService {
+    padding: 0 6em
+}
+
+/*ColumnLeft component CSS*/
+.ui.stackable.two.column.grid.container.containerStyle {
+    margin-top: 3.5em;
+}
+.ui.stackable.two.column.grid.container.containerStyle > .column.columnLeft {
+    text-align: left;
+    padding-left: 3.4em
+}
+
+/*ColumnRight component CSS*/
+
+.ui.stackable.two.column.grid.container.containerStyle2 {
+    margin-top: 3.5em;
+}
+
+.ui.stackable.two.column.grid.container.containerStyle2 > .column.columnRight {
+    text-align: left;
+    padding-left: 2.5em;
+}

@@ -4,6 +4,7 @@ import Bouquet from '../assets/images/bride_bouquet.jpg'
 import Party from '../assets/images/party_flowers.jpg';
 import Sad from '../assets/images/sad.jpg';
 import ColumnRight from './ColumnRight';
+import '../css/serviceAndColumns.css';
 
 export default class ServiceSection extends Component {
     textOne = "Bröllop Från stort och pampigt kyrkbröllop till en enkel vigsel vid havet, vi hjälper till med att skapa rätt stämning och känsla i allt från brudbukett, corsage, blommor till brudsällskapet, dekorationer till kyrkan och festlokalen."
@@ -11,14 +12,15 @@ export default class ServiceSection extends Component {
     textThree = "Begravning Att ta farväl av nära och kära kan vara tungt. Begravningsblommor kan bidra till att skapa ett ljust och vackert minne. Vi gör allt från kransar, dekorationer och hjärtan till kistor och hela kyrkomiljöer. Något som blir väldigt vackert är när vi får möjlighet att harmonisera helheten, allt från kransarna till kistdekorationen. "
     render() {
         return (
-            <div className="section servicesAndOffers" style={outer}>
+            <div className="section servicesAndOffers">
                 <div style={news}>
                     <h1>Blommor för alla tillfällen</h1>
-                    <div style={{padding: "0 6em"}}>
+                    <div className="columnsInService">
                         <ColumnLeft image={Bouquet} text={this.textOne} />
                         <ColumnRight text={this.textTwo} image={Party}/>
                         <ColumnLeft image={Sad} text={this.textThree} />
                     </div>
+
                 </div>
             </div>
         )
@@ -27,8 +29,4 @@ export default class ServiceSection extends Component {
 
 const news: React.CSSProperties = {
     fontFamily: "Dancing_Script"
-}
-
-const outer: React.CSSProperties = {
-    boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.1)"
 }

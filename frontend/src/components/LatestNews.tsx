@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import newsImg from '../assets/images/bukett_1.jpg';
 
 export default class LatestNews extends Component {
-    
+    text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error nihil assumenda magnam nesciunt rerum beatae adipisci consequatur inventore nisi exercitationem. Impedit veritatis ex nulla! Atque dignissimos quis error dolor ex!"
     render() {
         return (
             <div className="section latestNews" style={outer}>
@@ -10,14 +10,11 @@ export default class LatestNews extends Component {
                     <h1>Senaste nytt i butiken</h1>
                     <div className="ui stackable two column grid">
                         <div className="column" style={{textAlign: "left"}}>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro praesentium maxime ut, doloremque neque eaque tempora ratione, natus
-                            quis laboriosam assumenda saepe enim obcaecati quo, nihil sunt esse possimus iusto.
+                            <p>{this.text}
                             </p> <br></br>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro praesentium maxime ut, doloremque neque eaque tempora ratione, natus
-                            quis laboriosam assumenda saepe enim obcaecati quo, nihil sunt esse possimus iusto.
+                            <p>{this.text}
                             </p> <br></br>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro praesentium maxime ut, doloremque neque eaque tempora ratione, natus
-                            quis laboriosam assumenda saepe enim obcaecati quo, nihil sunt esse possimus iusto.
+                            <p>{this.text}
                             </p> <br></br>
                         </div>
                         <div className="column">

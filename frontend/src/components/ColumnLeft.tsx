@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../css/serviceAndColumns.css';
 
 interface Props {
     image: string,
@@ -9,8 +10,8 @@ export default class ColumnLeft extends Component<Props,{}> {
 
     render() {
         return (
-            <div className="ui stackable two column grid container" style={{marginTop: "3.5em"}}>
-                <div className="column" style={{textAlign: "left", paddingLeft: "3.4em"}}>
+            <div className="ui stackable two column grid container containerStyle">
+                <div className="column columnLeft">
                     <p>{this.props.text}
                     </p>
                 </div>
@@ -21,7 +22,6 @@ export default class ColumnLeft extends Component<Props,{}> {
         )
     }
 }
-
 
 const imgStyle: React.CSSProperties = {
     width: "85%",
