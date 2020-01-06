@@ -28,14 +28,7 @@ html, body {
 }
 
 .border_bg {
-  background-image: url('./assets/images/border_bg.jpg');
-  min-height: 300px;
-  opacity: 0.4;
-}
-
-.border_bg2 {
-  background-image: url('./assets/images/border_bg2.jpg');
-  min-height: 300px;
+  min-height: 270px;
   opacity: 0.4;
 }
 
