@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 
-export default class SectionDivider extends Component {
+interface Props {
+    image: string
+}
+
+export default class SectionDivider extends Component<Props,{}> {
 
     render() {
         return (
-            <div className="border_bg">
+            <div className="border_bg" style={{backgroundImage: `url(${this.props.image})`}}>
                 <div className="header_text">
                     <span className="border">
-                        Border Background Text
+                        Border Background Text Two
                     </span>
                 </div>
             </div>
