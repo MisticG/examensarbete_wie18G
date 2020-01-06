@@ -37,7 +37,7 @@ h1, h2 {
 }
 
 .border_bg {
-  min-height: 250px;
+  min-height: 200px;
   opacity: 0.4;
 }
 
@@ -57,7 +57,6 @@ h1, h2 {
   width: 100%;
   text-align: center;
   color: #000000;
-
   font-size: 28px;
   letter-spacing: 8px;
   text-transform: uppercase;
