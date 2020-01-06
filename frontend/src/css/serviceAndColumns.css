@@ -26,3 +26,26 @@
     text-align: left;
     padding-left: 2.5em;
 }
+
+/*Media Queries for the above components*/
+@media(max-width: 1200px) {
+    .section.servicesAndOffers{
+        padding-right: 1.7em;
+    }
+
+    .columnsInService {
+        padding: 0
+    }
+
+    .ui.stackable.two.column.grid.container.containerStyle2 {
+        margin-top: 0.5em;
+    }
+
+    .ui.stackable.two.column.grid.container.containerStyle > .column.columnLeft {
+        padding-left: 0
+    }
+
+    .ui.stackable.two.column.grid.container.containerStyle2 > .column.columnRight {
+        padding-left: 0;
+    }
+}

@@ -73,7 +73,9 @@ h1, h2 {
   .header_bg0, .border_bg, .border_bg2 {
     background-attachment: scroll;
   }
+}
 
+@media(max-width: 700px) {
   .section {
     margin: 0.7em 1em;
     padding: 1em 1em 3em;
