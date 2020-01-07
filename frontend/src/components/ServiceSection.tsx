@@ -16,11 +16,11 @@ export default class ServiceSection extends Component {
                 <div style={news}>
                     <h1>Blommor för alla tillfällen</h1>
                     <div className="columnsInService">
-                        <ColumnLeft image={Bouquet} text={this.textOne} />
-                        <ColumnRight text={this.textTwo} image={Party}/>
-                        <ColumnLeft image={Sad} text={this.textThree} />
+                        <ColumnLeft image={Bouquet} text={this.textOne} altText="bride holding a bouquet"/>
+                        <ColumnRight text={this.textTwo} image={Party} altText="Tracey Hocking party flowers"/>
+                        <ColumnLeft image={Sad} text={this.textThree} altText="flowers floating in the water"/>
                     </div>
-
+                    <button style={buttonStylezz} className="ui button">Kontakta oss</button>
                 </div>
             </div>
         )
@@ -30,3 +30,12 @@ export default class ServiceSection extends Component {
 const news: React.CSSProperties = {
     fontFamily: "Dancing_Script"
 }
+
+const buttonStylezz: React.CSSProperties = {
+    fontFamily: "Dancing_Script", 
+    fontSize: "2em",
+    backgroundColor: "rgba(198, 237, 228, 0.95)",
+    color: "rgba(0, 0, 0, 0.95)",
+    boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.1)"
+}
+

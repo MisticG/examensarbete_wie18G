@@ -4,6 +4,7 @@ import '../css/serviceAndColumns.css';
 interface Props {
     image: string,
     text: string
+    altText: string
 }
 
 export default class ColumnRight extends Component<Props,{}> {
@@ -12,7 +13,7 @@ export default class ColumnRight extends Component<Props,{}> {
         return (
             <div className="ui stackable two column grid container containerStyle2">
                 <div className="column">
-                    <img src={this.props.image} style={imgStyle} />
+                    <img src={this.props.image} style={imgStyle} alt={this.props.altText} />
                 </div>
                 <div className="column columnRight">
                     <p>{this.props.text}

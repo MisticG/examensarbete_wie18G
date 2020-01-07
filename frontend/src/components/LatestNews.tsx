@@ -18,11 +18,11 @@ export default class LatestNews extends Component {
                             </p> <br></br>
                         </div>
                         <div className="column">
-                            <img src={newsImg} style={imgStyle} />
+                            <img src={newsImg} style={imgStyle} alt="big ass bouquet"/>
                         </div>
                     </div>
                     <div>
-                        <a style={{cursor: "pointer"}}><h2 style={{fontSize: "2.5em", marginTop: "1em"}}>Se flera inlägg...</h2></a>
+                        <a style={{cursor: "pointer"}}><h2 style={{fontSize: "2em"}}>Se flera inlägg...</h2></a>
                     </div>
                 </div>
             </div>
@@ -31,7 +31,7 @@ export default class LatestNews extends Component {
 }
 
 const outer: React.CSSProperties = {
-    boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.1)"
+    boxShadow: "0px 5px 5px rgba(0, 0, 0, 0.25)"
 }
 
 const news: React.CSSProperties = {

@@ -4,6 +4,7 @@ import '../css/serviceAndColumns.css';
 interface Props {
     image: string,
     text: string
+    altText: string
 }
 
 export default class ColumnLeft extends Component<Props,{}> {
@@ -16,7 +17,7 @@ export default class ColumnLeft extends Component<Props,{}> {
                     </p>
                 </div>
                 <div className="column">
-                    <img src={this.props.image} style={imgStyle} />
+                    <img src={this.props.image} style={imgStyle} alt={this.props.altText} />
                 </div>
             </div>
         )
