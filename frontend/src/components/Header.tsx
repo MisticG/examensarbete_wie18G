@@ -1,34 +1,36 @@
 import React, { Component } from 'react';
+import '../css/header.css';
 
 export default class Header extends Component {
 
     render() {
         return (
             <div className="header_bg0">
-                <div className="header_text">
-                    <span className="border">
-                        testing...
-                    </span>
-                </div>
+              
+                    <div className="header_text container">
+                        <div className="ui stackable three column centered container headering">
+                            <div className="column" style={{marginBottom: "1em"}}>
+                                Backa
+                            </div>
+                            <div className="column headerStyle" style={{fontFamily: "MontSerrat"}}>
+                                Blommor    
+                            </div>
+                            <div className="column headerStyle2">
+                                <button style={buttonStyle} className="ui button">Kontakta oss</button>
+                            </div>                          
+                        </div>
+                    </div>
+                
             </div>
         )
     }
 }
 
-/*const insideStyles: React.CSSProperties  = {
-    background: "white",
-    padding: 20,
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%,-50%)"
-  };*/
-
-  /*const backStyle: React.CSSProperties = {
-    backgroundImage: `url(${Header_bg})`,
-    opacity: 0.7,
-    width: "100%",
-    height: "100rem",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "contain"
-  }*/
+const buttonStyle: React.CSSProperties = {
+    fontFamily: "Dancing_Script", 
+    fontSize: "0.3em",
+    backgroundColor: "rgba(198, 237, 228, 0.95)",
+    color: "rgba(0, 0, 0, 0.95)",
+    boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.1)",
+    opacity: 1
+}
