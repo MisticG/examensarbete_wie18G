@@ -11,14 +11,14 @@ export default class LatestNews extends Component {
                 <div style={news}>
                     <h1>Senaste nytt i butiken</h1>
                     <div className="ui stackable two column grid">
-                            <div className="column" style={{textAlign: "left"}}>
-                                <p>{this.text}
-                                </p> <br></br>
-                                <p>{this.text}
-                                </p> <br></br>
-                                <p>{this.text}
-                                </p> <br></br>
-                            </div>
+                        <div className="column" style={{textAlign: "left"}}>
+                            <p>{this.text}
+                            </p> <br></br>
+                            <p>{this.text}
+                            </p> <br></br>
+                            <p>{this.text}
+                            </p> <br></br>
+                        </div>
                         <div className="column">
                             <img src={newsImg} style={imgStyle} alt="big ass bouquet"/>
                         </div>
