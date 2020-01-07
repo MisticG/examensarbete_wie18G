@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import newsImg from '../assets/images/bukett_1.jpg';
+//import MediaQuery from 'react-responsive';
 
 export default class LatestNews extends Component {
+    
     text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error nihil assumenda magnam nesciunt rerum beatae adipisci consequatur inventore nisi exercitationem. Impedit veritatis ex nulla! Atque dignissimos quis error dolor ex!"
     render() {
         return (
@@ -9,20 +11,20 @@ export default class LatestNews extends Component {
                 <div style={news}>
                     <h1>Senaste nytt i butiken</h1>
                     <div className="ui stackable two column grid">
-                        <div className="column" style={{textAlign: "left"}}>
-                            <p>{this.text}
-                            </p> <br></br>
-                            <p>{this.text}
-                            </p> <br></br>
-                            <p>{this.text}
-                            </p> <br></br>
-                        </div>
+                            <div className="column" style={{textAlign: "left"}}>
+                                <p>{this.text}
+                                </p> <br></br>
+                                <p>{this.text}
+                                </p> <br></br>
+                                <p>{this.text}
+                                </p> <br></br>
+                            </div>
                         <div className="column">
                             <img src={newsImg} style={imgStyle} alt="big ass bouquet"/>
                         </div>
                     </div>
                     <div>
-                        <a style={{cursor: "pointer"}}><h2 style={{fontSize: "2em"}}>Se flera inlägg...</h2></a>
+                        <a style={{cursor: "pointer"}}><h2 style={{fontSize: "2em", marginTop: "2em"}}>Se flera inlägg...</h2></a>
                     </div>
                 </div>
             </div>
@@ -44,3 +46,4 @@ const imgStyle: React.CSSProperties = {
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat"
 }
+
