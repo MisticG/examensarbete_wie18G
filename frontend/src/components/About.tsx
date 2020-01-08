@@ -1,0 +1,13 @@
+import React, { Component } from 'react';
+import '../css/header.css';
+
+export default class About extends Component {
+
+    render() {
+        return (
+            <div>
+                <h1>hej</h1>
+            </div>
+        )
+    }
+}
