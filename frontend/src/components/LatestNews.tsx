@@ -12,12 +12,7 @@ export default class LatestNews extends Component {
                     <h1>Senaste nytt i butiken</h1>
                     <div className="ui stackable two column grid">
                         <div className="column" style={{textAlign: "left"}}>
-                            <p>{this.text}
-                            </p> <br></br>
-                            <p>{this.text}
-                            </p> <br></br>
-                            <p>{this.text}
-                            </p> <br></br>
+                            <p>{this.text} <br></br> {this.text} <br></br> {this.text}</p> 
                         </div>
                         <div className="column">
                             <img src={newsImg} style={imgStyle} alt="big ass bouquet"/>

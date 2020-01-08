@@ -6,20 +6,27 @@ export default class GalleryImage extends Component {
         return r.keys().map(r);
     }
       
-    images = this.importAll(require.context('../../assets/images/', false, /\.(png|jpe?g|svg)$/));
+    images = this.importAll(require.context('../../assets/images/gallery/', false, /\.(png|jpe?g|svg)$/));
 
     allImages() {
         return this.images.map((image: string) => (
-            <div>
-                <img src={image} style={{width: "300px", height: "300px"}} />
+            <div className="column">
+                <img src={image} style={imgStyle} />
             </div>
         ))
     }
 
     render() {
         return (
-            <div>{this.allImages()}</div>
+            this.allImages()
         )
         
     }
+}
+
+const imgStyle: React.CSSProperties = {
+    width: "100%",
+    backgroundPosition: "center",
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
 }
