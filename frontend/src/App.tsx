@@ -7,6 +7,8 @@ import SectionDivider from './components/SectionDivider';
 import ServiceSection from './components/ServiceSection';
 import border_img from './assets/images/border_bg.jpg';
 import border_img2 from './assets/images/border_bg2.jpg';
+import GallerySection from './components/gallerySection/GallerySection';
+import Footer from './components/Footer';
 
 export default class App extends Component {
     render() {
@@ -21,6 +23,8 @@ export default class App extends Component {
               <SectionDivider image={border_img} />
               <ServiceSection />
               <SectionDivider image={border_img2} />
+              <GallerySection />
+              <Footer />
             </div>
           </div>
         )

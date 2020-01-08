@@ -18,6 +18,11 @@ h1, h2 {
   margin-bottom: 1em;
 }
 
+h3 {
+  font-family: 'Montserrat';
+  font-weight: normal;
+}
+
 .header_bg0, .border_bg, .border_bg2 {
   position: relative;
   background-position: center;
