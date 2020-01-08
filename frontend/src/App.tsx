@@ -1,43 +1,53 @@
 import React, { Component } from 'react';
-import './App.css';
-import LocalRouter from './components/Router';
-import Header from './components/Header'
-import LatestNews from './components/LatestNews';
-import SectionDivider from './components/SectionDivider';
-import ServiceSection from './components/ServiceSection';
-import border_img from './assets/images/border_bg.jpg';
-import border_img2 from './assets/images/border_bg2.jpg';
-import GallerySection from './components/gallerySection/GallerySection';
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Gallery from './components/Gallery';
+import Main from './Main';
+import About from './components/About';
 
 export default class App extends Component {
     render() {
         return (
-          <div>
-            <div style={{backgroundColor: "rgba(139, 108, 108, 0.9)"}}>
-              <LocalRouter />
-            </div>
-            <div>
-              <Header />
-              <LatestNews />
-              <SectionDivider image={border_img} />
-              <ServiceSection />
-              <SectionDivider image={border_img2} />
-              <GallerySection />
-              <Footer />
-            </div>
-          </div>
-        )
+            <Router>
+              <div style={{backgroundColor: "rgba(139, 108, 108, 0.9)"}}>
+                  <div className="ui container center aligned">
+                      <div className="ui five big item secondary menu container" style={naviStyle}>
+                          <Link to="/" className="item">HEM</Link>
+                          <Link to="/gallery" className="item">GALLERI</Link>
+                          <Link to="/about" className="item">OM OSS</Link>
+                          <Link to="/contact" className="item">KONTAKT</Link>
+                          <Link to="/offers" className="item">TJÄNSTER & UTBUD</Link>
+                      </div>
+                  </div>
+                </div>
+        
+                {/* A <Switch> looks through its children <Route>s and
+                    renders the first one that matches the current URL. */}
+                <Switch>
+                <Route exact path="/">
+                    <Main />
+                </Route>
+                <Route path="/gallery">
+                    <Gallery />
+                </Route>
+                <Route path="/about">
+                    <About />
+                </Route>
+                <Route path="/contact">
+                    {/*<Contact />*/}
+                </Route>
+                <Route path="/offers">
+                    {/*<Offers />*/}
+                </Route>
+                </Switch>
+            </Router>
+        );
     }
 }
 
-/*const bgStyle: React.CSSProperties = {
-  backgroundImage: `url(${Header_bg})`,
-  opacity: 0.7,
-  width: "auto",
-  height: "95vh",
-  backgroundPosition: "center",
-  backgroundRepeat: "no-repeat",
-  backgroundSize: "cover",
-  position: "relative",
-}*/
+const naviStyle: React.CSSProperties = {
+    margin: 0,
+    padding: 0,
+    fontWeight: "normal",
+    color: "black",
+    fontFamily: "Montserrat"
+}
