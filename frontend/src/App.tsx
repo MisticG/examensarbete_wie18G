@@ -4,21 +4,22 @@ import Gallery from './components/Gallery';
 import Main from './components/Main';
 import About from './components/About';
 import Contact from './components/Contact';
+import Products from './components/Products';
 
 export default class App extends Component {
     render() {
         return (
             <Router>
-              <div style={{backgroundColor: "rgba(139, 108, 108, 0.9)"}}>
-                  <div className="ui container center aligned">
-                      <div className="ui five big item secondary menu container" style={naviStyle}>
-                          <Link to="/" className="item">HEM</Link>
-                          <Link to="/gallery" className="item">GALLERI</Link>
-                          <Link to="/about" className="item">OM OSS</Link>
-                          <Link to="/contact" className="item">KONTAKT</Link>
-                          <Link to="/offers" className="item">TJÄNSTER & UTBUD</Link>
-                      </div>
-                  </div>
+                <div className="sticky" style={{backgroundColor: "rgba(139, 108, 108, 1)"}}>
+                    <div className="ui container center aligned">
+                        <div className="ui five big item secondary menu container" style={naviStyle}>
+                            <Link to="/" className="item">HEM</Link>
+                            <Link to="/gallery" className="item">GALLERI</Link>
+                            <Link to="/about" className="item">OM OSS</Link>
+                            <Link to="/contact" className="item">KONTAKT</Link>
+                            <Link to="/products" className="item">TJÄNSTER & UTBUD</Link>
+                        </div>
+                    </div>
                 </div>
                 
                 <Switch>
@@ -34,8 +35,8 @@ export default class App extends Component {
                 <Route path="/contact">
                     <Contact />
                 </Route>
-                <Route path="/offers">
-                    {/*<Offers />*/}
+                <Route path="/products">
+                    <Products />
                 </Route>
                 </Switch>
             </Router>

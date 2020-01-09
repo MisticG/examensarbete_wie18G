@@ -23,6 +23,13 @@ h3 {
   font-weight: normal;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
 .header_bg0, .border_bg, .border_bg2 {
   position: relative;
   background-position: center;
@@ -95,6 +102,7 @@ h3 {
 }
 
 body {
+  background-color: rgba(255, 255, 255, 0.95);
   font-family: -apple-system, BlinkMacSystemFont, 'Dancing_Script', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
