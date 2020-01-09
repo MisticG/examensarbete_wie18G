@@ -1,0 +1,52 @@
+/*ServiceSection component CSS*/
+.section.servicesAndOffers {
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+.columnsInService {
+    padding: 0 6em;
+    margin-bottom: 4em;
+}
+
+/*ColumnLeft component CSS*/
+.ui.stackable.two.column.grid.container.containerStyle {
+    margin-top: 3.5em;
+}
+.ui.stackable.two.column.grid.container.containerStyle > .column.columnLeft {
+    text-align: left;
+    padding-left: 3.4em
+}
+
+/*ColumnRight component CSS*/
+
+.ui.stackable.two.column.grid.container.containerStyle2 {
+    margin-top: 3.5em;
+}
+
+.ui.stackable.two.column.grid.container.containerStyle2 > .column.columnRight {
+    text-align: left;
+    padding-left: 2.5em;
+}
+
+/*Media Queries for the above components*/
+@media(max-width: 1200px) {
+    .section.servicesAndOffers{
+        padding: 1em 1.7em 4em;
+    }
+
+    .columnsInService {
+        padding: 0
+    }
+
+    .ui.stackable.two.column.grid.container.containerStyle2 {
+        margin-top: 3em;
+    }
+
+    .ui.stackable.two.column.grid.container.containerStyle > .column.columnLeft {
+        padding-left: 0
+    }
+
+    .ui.stackable.two.column.grid.container.containerStyle2 > .column.columnRight {
+        padding-left: 0;
+    }
+}
