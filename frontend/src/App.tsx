@@ -10,7 +10,7 @@ export default class App extends Component {
     render() {
         return (
             <Router>
-                <div className="sticky" style={{backgroundColor: "rgba(139, 108, 108, 1)"}}>
+                <div className="sticky">
                     <div className="ui container center aligned">
                         <div className="ui five big item secondary menu container" style={naviStyle}>
                             <Link to="/" className="item">HEM</Link>
@@ -23,21 +23,21 @@ export default class App extends Component {
                 </div>
                 
                 <Switch>
-                <Route exact path="/">
-                    <Main />
-                </Route>
-                <Route path="/gallery">
-                    <Gallery />
-                </Route>
-                <Route path="/about">
-                    <About />
-                </Route>
-                <Route path="/contact">
-                    <Contact />
-                </Route>
-                <Route path="/products">
-                    <Products />
-                </Route>
+                    <Route exact path="/">
+                        <Main />
+                    </Route>
+                    <Route path="/gallery">
+                        <Gallery />
+                    </Route>
+                    <Route path="/about">
+                        <About />
+                    </Route>
+                    <Route path="/contact">
+                        <Contact />
+                    </Route>
+                    <Route path="/products">
+                        <Products />
+                    </Route>
                 </Switch>
             </Router>
         );

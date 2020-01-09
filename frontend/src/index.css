@@ -24,6 +24,7 @@ h3 {
 }
 
 .sticky {
+  background-color: rgba(139, 108, 108, 1);
   position: fixed;
   top: 0;
   width: 100%;
