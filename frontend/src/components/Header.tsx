@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../css/header.css';
+import FadeIn from 'react-fade-in';
 
 export default class Header extends Component {
 
@@ -8,6 +9,7 @@ export default class Header extends Component {
             <div className="header_bg0">
               
                     <div className="header_text container">
+                    <FadeIn delay={100} transitionDuration={1200}>
                         <div className="ui stackable three column centered container headering">
                             <div className="column" style={{marginBottom: "1em"}}>
                                 Backa
@@ -17,8 +19,9 @@ export default class Header extends Component {
                             </div>
                             <div className="column headerStyle2">
                                 <button style={buttonStyle} className="ui button">Kontakta oss</button>
-                            </div>                          
+                            </div>                   
                         </div>
+                        </FadeIn> 
                     </div>
                 
             </div>
