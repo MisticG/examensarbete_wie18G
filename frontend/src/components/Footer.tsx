@@ -5,22 +5,21 @@ export default class Footer extends Component {
     render() {
         return (
             <div style={footerStyle}>
-            <div className="ui container"  >
-                <div className="ui stackable two column grid" style={{justifyContent: "center"}} >
-                    <h2 style={{fontSize: "3em"}}>Vi har öppet 365 dagar om året!</h2>
-                    <div className="column" >
-                        <h3>Backa Blommor<br></br>
-                        Backavägen 2 <br></br>
-                        41705 Göteborg</h3> <br></br>
-                        <h3>(Huvudentrén till Stora Coop på Backaplan.)</h3>
-                    </div>
-                    <div className="column">
-
-                        <img src={fbLogo} style={{display: "flex", width: "15%"}}></img>
-                        <button style={buttonStylezz} className="ui button">Kontakta oss</button>
+                <div className="ui container"  >
+                    <div className="ui stackable two column grid" style={{justifyContent: "center"}} >
+                        <h2 style={{fontSize: "3em"}}>Vi har öppet 365 dagar om året!</h2>
+                        <div className="column" >
+                            <h3>Backa Blommor<br></br>
+                            Backavägen 2 <br></br>
+                            41705 Göteborg</h3> <br></br>
+                            <h3>(Huvudentrén till Stora Coop på Backaplan.)</h3>
+                        </div>
+                        <div className="column">
+                            <img src={fbLogo} style={{display: "flex", width: "15%"}}></img>
+                            <button style={buttonStylezz} className="ui button">Kontakta oss</button>
+                        </div>
                     </div>
                 </div>
-            </div>
             </div>
         )
     }

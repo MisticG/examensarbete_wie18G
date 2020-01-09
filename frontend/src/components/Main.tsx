@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../App.css';
-//import LocalRouter from './components/Router';
 import Header from './Header'
 import LatestNews from './LatestNews';
 import SectionDivider from './SectionDivider';

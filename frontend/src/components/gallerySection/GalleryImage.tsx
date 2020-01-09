@@ -20,7 +20,6 @@ export default class GalleryImage extends Component {
         return (
             this.allImages()
         )
-        
     }
 }
 

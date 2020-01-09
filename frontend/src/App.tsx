@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Gallery from './components/Gallery';
 import Main from './components/Main';
 import About from './components/About';
+import Contact from './components/Contact';
 
 export default class App extends Component {
     render() {
@@ -19,9 +20,7 @@ export default class App extends Component {
                       </div>
                   </div>
                 </div>
-        
-                {/* A <Switch> looks through its children <Route>s and
-                    renders the first one that matches the current URL. */}
+                
                 <Switch>
                 <Route exact path="/">
                     <Main />
@@ -33,7 +32,7 @@ export default class App extends Component {
                     <About />
                 </Route>
                 <Route path="/contact">
-                    {/*<Contact />*/}
+                    <Contact />
                 </Route>
                 <Route path="/offers">
                     {/*<Offers />*/}
