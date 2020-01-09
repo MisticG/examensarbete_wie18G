@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/examensarbete_wie18G/static/css/main.abbfca1b.chunk.css",
+    "main.js": "/examensarbete_wie18G/static/js/main.10a48b4c.chunk.js",
+    "main.js.map": "/examensarbete_wie18G/static/js/main.10a48b4c.chunk.js.map",
+    "runtime-main.js": "/examensarbete_wie18G/static/js/runtime-main.07948e5d.js",
+    "runtime-main.js.map": "/examensarbete_wie18G/static/js/runtime-main.07948e5d.js.map",
+    "static/js/2.77090463.chunk.js": "/examensarbete_wie18G/static/js/2.77090463.chunk.js",
+    "static/js/2.77090463.chunk.js.map": "/examensarbete_wie18G/static/js/2.77090463.chunk.js.map",
+    "index.html": "/examensarbete_wie18G/index.html",
+    "precache-manifest.468423175d6958a10b0ebf163d1ff904.js": "/examensarbete_wie18G/precache-manifest.468423175d6958a10b0ebf163d1ff904.js",
+    "service-worker.js": "/examensarbete_wie18G/service-worker.js",
+    "static/css/main.abbfca1b.chunk.css.map": "/examensarbete_wie18G/static/css/main.abbfca1b.chunk.css.map",
+    "static/js/2.77090463.chunk.js.LICENSE": "/examensarbete_wie18G/static/js/2.77090463.chunk.js.LICENSE",
+    "static/media/DancingScript-Regular.ttf": "/examensarbete_wie18G/static/media/DancingScript-Regular.20869921.ttf",
+    "static/media/Montserrat-Medium.ttf": "/examensarbete_wie18G/static/media/Montserrat-Medium.c8b6e083.ttf",
+    "static/media/alana-harris-pink-flowers.jpg": "/examensarbete_wie18G/static/media/alana-harris-pink-flowers.b231f837.jpg",
+    "static/media/anita-jankovic-flowers.jpg": "/examensarbete_wie18G/static/media/anita-jankovic-flowers.84dd33b0.jpg",
+    "static/media/artsy-vibes-bunch-flowers.jpg": "/examensarbete_wie18G/static/media/artsy-vibes-bunch-flowers.166a0204.jpg",
+    "static/media/index.css": "/examensarbete_wie18G/static/media/bg_2.aa1bed59.jpg",
+    "static/media/border_bg.jpg": "/examensarbete_wie18G/static/media/border_bg.e5377baf.jpg",
+    "static/media/border_bg2.jpg": "/examensarbete_wie18G/static/media/border_bg2.e988d36a.jpg",
+    "static/media/bouquet-691862_1920.jpg": "/examensarbete_wie18G/static/media/bouquet-691862_1920.f703ec6e.jpg",
+    "static/media/bride_bouquet.jpg": "/examensarbete_wie18G/static/media/bride_bouquet.424e84db.jpg",
+    "static/media/bukett_1.jpg": "/examensarbete_wie18G/static/media/bukett_1.bf7bde32.jpg",
+    "static/media/flower-393051_1920.jpg": "/examensarbete_wie18G/static/media/flower-393051_1920.a189def5.jpg",
+    "static/media/ivan-di-tulip.jpg": "/examensarbete_wie18G/static/media/ivan-di-tulip.27fe41f8.jpg",
+    "static/media/kelly-sikkema.jpg": "/examensarbete_wie18G/static/media/kelly-sikkema.090e8c3b.jpg",
+    "static/media/map.jpg": "/examensarbete_wie18G/static/media/map.84b322c8.jpg",
+    "static/media/party_flowers.jpg": "/examensarbete_wie18G/static/media/party_flowers.b61b7da4.jpg",
+    "static/media/paula-brustur-bridal.jpg": "/examensarbete_wie18G/static/media/paula-brustur-bridal.ec37d44b.jpg",
+    "static/media/sad.jpg": "/examensarbete_wie18G/static/media/sad.94e15927.jpg",
+    "static/media/scotland_IoS.jpg": "/examensarbete_wie18G/static/media/scotland_IoS.ed1e6e8d.jpg",
+    "static/media/tracey-hocking.jpg": "/examensarbete_wie18G/static/media/tracey-hocking.41c27d8c.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.07948e5d.js",
+    "static/js/2.77090463.chunk.js",
+    "static/css/main.abbfca1b.chunk.css",
+    "static/js/main.10a48b4c.chunk.js"
+  ]
+}
