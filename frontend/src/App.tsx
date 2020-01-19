@@ -4,11 +4,16 @@ import Gallery from './components/Gallery';
 import Main from './components/Main';
 import About from './components/About';
 import Contact from './components/Contact';
-import Products from './components/Products';
+import Products from './components/ProductList';
+import Cart from './components/Cart';
+import { ProductProvider } from './context'
+import ProductDetails from './components/ProductDetails';
+import Modal from './components/Modal';
 
 export default class App extends Component {
     render() {
         return (
+            <ProductProvider>
             <Router>
                 <div className="sticky">
                     <div className="ui container center aligned">
@@ -18,10 +23,12 @@ export default class App extends Component {
                             <Link to="/about" className="item">OM OSS</Link>
                             <Link to="/contact" className="item">KONTAKT</Link>
                             <Link to="/products" className="item">TJÄNSTER & UTBUD</Link>
+                            <Link to="/cart" className="item"><i className="shipping fast icon"></i> </Link>
                         </div>
                     </div>
                 </div>
-                
+                <Modal /> 
+                {/*Städa upp i route */}
                 <Switch>
                     <Route exact path="/">
                         <Main />
@@ -38,8 +45,16 @@ export default class App extends Component {
                     <Route path="/products">
                         <Products />
                     </Route>
+                    <Route path="/cart">
+                        <Cart />
+                    </Route>
+                    <Route path="/details">
+                        <ProductDetails />
+                    </Route>
                 </Switch>
+                
             </Router>
+            </ProductProvider>
         );
     }
 }
