@@ -5,7 +5,7 @@ import Main from './components/Main';
 import About from './components/About';
 import Contact from './components/Contact';
 import Products from './components/ProductList';
-import Cart from './components/Cart';
+import Cart from './components/cart/Cart';
 import { ProductProvider } from './context'
 import ProductDetails from './components/ProductDetails';
 import Modal from './components/Modal';
