@@ -5,6 +5,7 @@ import IsleofSky from '../assets/images/scotland_IoS.jpg';
 import GoogleMap from '../assets/images/map.jpg';
 import Footer from './Footer';
 import FadeIn from 'react-fade-in';
+import { Link } from 'react-router-dom';
 
 export default class About extends Component {
     text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque asperiores debitis omnis perferendis? Provident libero pariatur nisi! Esse fuga quibusdam natus accusantium voluptate. Blanditiis, similique! Quia quae cupiditate natus in."
@@ -30,7 +31,7 @@ export default class About extends Component {
                                 <br></br>
                                     Måndag - lördag <br></br> 10 - 19 <br></br>
                                     Söndag <br></br> 11 - 17</h3>
-                                    <button style={buttonStylezz} className="ui button">Kontakta oss</button>
+                                    <Link to="/contact"><button style={buttonStylezz} className="ui button">Kontakta oss</button></Link>
                                 </div>
                                 <div className="column">
                                     <img src={GoogleMap} style={{display: "flex", width: "100%"}} alt="map to the store"></img>
