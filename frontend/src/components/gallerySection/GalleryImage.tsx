@@ -10,7 +10,7 @@ export default class GalleryImage extends Component {
 
     allImages() {
         return this.images.map((image: string) => (
-            <div className="column">
+            <div className="column" key={image}>
                 <img src={image} style={imgStyle} />
             </div>
         ))
