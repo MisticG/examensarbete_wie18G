@@ -40,9 +40,29 @@ export default class About extends Component <{}, State> {
 
     handleSubmit(event: React.FormEvent) {
         event.preventDefault();
-        console.log(this.state)
+        fetch('/sendForm', {
+            method: "POST",
+            body: JSON.stringify(this.state),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+        }).then(res => res.json())
+        .then(res => {
+            if(res.status === 'success') {
+                alert("Message sent")
+                this.resetForm()
+            } else if (res.status === 'fail') {
+                alert("Message failed to send.")
+            }
+        })
     }
 
+    resetForm() {
+        this.setState({name: '', email: '', message: ''})
+    }
+
+    //Lägg till validation rules
     render() {
         return (
             <div>
