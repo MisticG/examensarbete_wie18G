@@ -3,32 +3,71 @@ import '../css/header.css';
 import Footer from './Footer';
 import FadeIn from 'react-fade-in';
 
-export default class About extends Component {
+interface State {
+    name: string,
+    email: string,
+    message: string
+}
+
+export default class About extends Component <{}, State> {
+    constructor(props: {}) {
+        super(props);
+        this.state = {
+            name: '',
+            email: '',
+            message: ''
+        }
+
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.onNameChange = this.onNameChange.bind(this);
+        this.onEmailChange = this.onEmailChange.bind(this);
+        this.onMessageChange = this.onMessageChange.bind(this);
+    }
+
+    
+
+    onNameChange = (event: React.FormEvent<HTMLInputElement>) => {
+        this.setState({name: event.currentTarget.value})
+    }
+
+    onEmailChange= (event: React.FormEvent<HTMLInputElement>) => {
+        this.setState({email: event.currentTarget.value})
+    }
+
+    onMessageChange= (event: React.FormEvent<HTMLTextAreaElement>) => {
+        this.setState({message: event.currentTarget.value})
+    }
+
+    handleSubmit(event: React.FormEvent) {
+        event.preventDefault();
+        console.log(this.state)
+    }
+
     render() {
         return (
             <div>
                 <div className="section" style={outer}>
                     <div className="ui container" style={{marginTop: "4em", marginBottom: "4em"}}>
-                        <div className="ui form section" style={outer}>
+                        <form className="ui form section" onSubmit={this.handleSubmit.bind(this)} style={outer}>
                             <h1>Kontaktformulär</h1>
                             <FadeIn delay={200} transitionDuration={1000}>
                                 <div style={{textAlign: "left"}}>
                                     <div className="field">
                                         <label><h3>Namn</h3></label>
-                                        <input type="text"/>
+                                        <input type="text" value={this.state.name} onChange={this.onNameChange.bind(this)}/>
                                     </div>
                                     <div className="field">
                                         <label><h3>E-mail</h3></label>
-                                        <input type="text" />
+                                        <input type="text" value={this.state.email} onChange={this.onEmailChange.bind(this)} />
                                     </div>
                                     <div className="field">
                                         <label><h3>Ditt meddelande</h3></label>
-                                        <textarea></textarea>
+                                        <textarea value={this.state.message} onChange={this.onMessageChange.bind(this)}></textarea>
                                     </div>
-                                    <div className="ui right floated green submit button">Submit</div>
+                                    <button className="ui green button" type="submit">Submit</button>
                                 </div>
                             </FadeIn>
-                        </div>                        
+                        </form>                        
                     </div>
                 </div>
                 <Footer />
