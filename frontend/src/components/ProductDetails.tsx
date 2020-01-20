@@ -7,7 +7,7 @@ export default class ProductDetails extends Component {
         return(
             <ProductConsumer>
                 {value => {
-                    const { id, company, img, info, price, title, inCart } =
+                    const { id, img, info, price, title, inCart } =
                     value.detailProduct;
                     return (
                         <div style={{marginTop: "5em", textAlign: "center"}} className="ui container">
@@ -29,7 +29,6 @@ export default class ProductDetails extends Component {
                             <img className="ui image" src={img} alt="product"/>
                             <h2>Price: {price}</h2>
                             <h2> Description: {info}</h2>
-                            <h2>Made by: {company}</h2>
                         </div>
                     )
                 }}

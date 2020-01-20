@@ -30,7 +30,7 @@ export default class Product extends Component<Props,{}> {
                     </div>
                     <div className="content">
                         <div className="header">
-                            {title}
+                            <h3>{title}</h3>
                         </div>
                         <div className="extra content">
                             <h3>Price: {price}</h3>
