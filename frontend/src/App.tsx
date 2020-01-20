@@ -9,6 +9,7 @@ import Cart from './components/cart/Cart';
 import { ProductProvider } from './context'
 import ProductDetails from './components/ProductDetails';
 import Modal from './components/Modal';
+import Default from './components/Default';
 
 export default class App extends Component {
     render() {
@@ -50,6 +51,9 @@ export default class App extends Component {
                     </Route>
                     <Route path="/details">
                         <ProductDetails />
+                    </Route>
+                    <Route>
+                        <Default />
                     </Route>
                 </Switch>
                 
