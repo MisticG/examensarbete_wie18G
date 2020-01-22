@@ -28,13 +28,13 @@ class ProductProvider extends Component {
     }*/
 
     setProducts = () => {
-        /*let tempProducts: any[] = [];
-        fetch('/posts')
+        let tempProducts: any[] = [];
+        fetch('/products')
         .then(res => res.json())
         .then((res) => {
             console.log(res)
             res.forEach( (item: any) => {
-                const singleItem = { item }
+                const singleItem = { ...item }
                 console.log(item._id)
                 tempProducts = [...tempProducts, singleItem]
             })
@@ -42,9 +42,9 @@ class ProductProvider extends Component {
                 return { products: tempProducts } 
             })
         })
-    };  */  
+    };   
         
-        let tempProducts: any[] = [];
+        /*let tempProducts: any[] = [];
         storeProducts.forEach( item => {
             const singleItem = {...item}
             tempProducts = [...tempProducts, singleItem]
@@ -52,23 +52,23 @@ class ProductProvider extends Component {
         this.setState(() => {
             return {products: tempProducts}
         })
-    };
+    };*/
 
-    getItem = (id: number) => {
-        const product = this.state.products.find((item: { id: number }) => item.id === id)
+    getItem = (_id: number) => {
+        const product = this.state.products.find((item: { _id: number }) => item._id === _id)
         return product;
     };
 
-    handleDetail = (id: number) => {
-        const product = this.getItem(id);
+    handleDetail = (_id: number) => {
+        const product = this.getItem(_id);
         this.setState(() => {
             return {detailProduct: product}
         });
     };
 
-    addToCart = (id: number) => {
+    addToCart = (_id: number) => {
         let tempProducts: any[] = [...this.state.products];
-        const index = tempProducts.indexOf(this.getItem(id))
+        const index = tempProducts.indexOf(this.getItem(_id))
         const product = tempProducts[index]
         product.inCart = true
         product.count = 1;
@@ -83,8 +83,8 @@ class ProductProvider extends Component {
 
     }
 
-    openModal = (id: number) => {
-        const product = this.getItem(id);
+    openModal = (_id: number) => {
+        const product = this.getItem(_id);
         this.setState(() => {
             return {modalProduct: product, modalOpen: true}
         })
@@ -96,9 +96,9 @@ class ProductProvider extends Component {
         })
     }
 
-    increment = (id: number) => {
+    increment = (_id: number) => {
         let tempCart: any = [...this.state.cart];
-        const selectedProduct = tempCart.find((item: {id: number}) => item.id === id);
+        const selectedProduct = tempCart.find((item: {_id: number}) => item._id === _id);
         const index = tempCart.indexOf(selectedProduct);
         const product = tempCart[index];
 
@@ -114,15 +114,15 @@ class ProductProvider extends Component {
         })
     }
 
-    decrement = (id: number) => {
+    decrement = (_id: number) => {
         let tempCart: any = [...this.state.cart];
-        const selectedProduct = tempCart.find((item: {id: number}) => item.id === id);
+        const selectedProduct = tempCart.find((item: {_id: number}) => item._id === _id);
         const index = tempCart.indexOf(selectedProduct);
         const product = tempCart[index];
 
         product.count = product.count - 1;
         if(product.count === 0) {
-            this.removeItem(id)
+            this.removeItem(_id)
         } else {
             product.total = product.count * product.price;
             this.setState(() => {
@@ -135,12 +135,12 @@ class ProductProvider extends Component {
         }
     }
 
-    removeItem = (id: number) => {
+    removeItem = (_id: number) => {
         let tempProducts: any[] = [...this.state.products];
         let tempCart = [...this.state.cart];
 
-        tempCart = tempCart.filter((item: {id: number}) => item.id !== id)
-        const index = tempProducts.indexOf(this.getItem(id))
+        tempCart = tempCart.filter((item: {_id: number}) => item._id !== _id)
+        const index = tempProducts.indexOf(this.getItem(_id))
         let removedProduct = tempProducts[index];
         removedProduct.inCart = false;
         removedProduct.count = 0;
