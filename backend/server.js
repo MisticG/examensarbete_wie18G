@@ -5,12 +5,14 @@ const app = express();
 //mongoose.Promise = es6Promise;//Promise;//require('bluebird'); //global.Promise;
 //import routes
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
 const postsRoute = require('./routes/posts');
-require('dotenv/config');
+const sendMessageRoute = require('./routes/sendMessage');
 
-app.use(bodyParser.json());
 
+app.use(express.urlencoded({
+    extended: false
+}))
+app.use(express.json())
 
 app.get('/api/test', (req, res) => {
     const test = [
@@ -24,11 +26,13 @@ app.get('/api/test', (req, res) => {
 
 
 //Middlewares, functions that executes when on a specific route
-/*app.use('/posts', () => {
+app.use('/posts', () => {
     console.log("This is a middleware running");
-});*/
+});
 
 app.use('/posts', postsRoute);
+
+app.use('/send', sendMessageRoute);
 
 //ROUTES
 app.get('/', (req, res) => {
