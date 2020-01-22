@@ -4,6 +4,17 @@ const mongoose = require('mongoose');
 const Post = require('../models/post');
 require('dotenv/config');
 
+try {
+    mongoose.connect(
+        process.env.DB_PRODUCTS,
+        {useUnifiedTopology: true, useNewUrlParser: true },
+        () => {
+        console.log("Connected to DB_PRODUCTS!");
+    });
+} catch (error) {
+    console.error(error);
+}
+
 //GET BACK ALL THE POSTS
 router.get('/', async (req, res) => {
     try{
@@ -23,7 +34,9 @@ router.post('/', async (req, res) => {
 
     const post = new Post({
         title: req.body.title,
-        description: req.body.description
+        info: req.body.info,
+        img: req.body.img,
+        price: req.body.price
     });
 
     try{
@@ -38,16 +51,5 @@ router.post('/', async (req, res) => {
 router.get('/:postId', async (req, res) => {
 
 })
-
-try {
-    mongoose.connect(
-        process.env.DB_CONNECTION,
-        {useUnifiedTopology: true, useNewUrlParser: true },
-        () => {
-        console.log("Connected to DB!");
-    });
-} catch (error) {
-    console.error(error);
-}
 
 module.exports = router;
