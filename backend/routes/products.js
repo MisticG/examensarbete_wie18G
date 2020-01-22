@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
-const Post = require('../models/Post');
+const Post = require('../models/post');
 require('dotenv/config');
 
 //GET BACK ALL THE POSTS
