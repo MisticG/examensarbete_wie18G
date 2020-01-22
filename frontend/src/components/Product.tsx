@@ -4,7 +4,7 @@ import {ProductConsumer} from '../context';
 
 interface Props {
     
-    id: number,
+    _id: number,
     img: string,
     title: string,
     price: number,
@@ -14,16 +14,16 @@ interface Props {
 
 export default class Product extends Component<Props,{}> {
     render() {
-        const { id, img, title, price, inCart} = this.props
+        const { _id, img, title, price, inCart} = this.props
 
         //Styla cards!
         return (
             <ProductConsumer>
                 {value => (
-            <div className="ui link cards">
+            
                     
-                <div>
-                    <div className="ui image" onClick={() => { value.handleDetail(id)}}>
+                <div className="column">
+                    <div className="ui image" onClick={() => { value.handleDetail(_id)}}>
                     <Link to="/details">
                         <img src={img} alt="product" />
                     </Link>
@@ -36,17 +36,17 @@ export default class Product extends Component<Props,{}> {
                             <h3>Price: {price}</h3>
                             <button className="ui green button" disabled={inCart? true : false} 
                             onClick={() => {
-                                value.addToCart(id);
-                                value.openModal(id);
+                                value.addToCart(_id);
+                                value.openModal(_id);
                                 }}>Add to Cart</button>
-                        {inCart? (<p className="ui disabled">{' '}Product in Cart</p>) : (<i className="cart plus icon"/>)}
+                        {inCart? (<p className="ui disabled">{' '}Product in Cart</p>) : ('')}
                         </div>
                     </div>
                     
 
                 </div>
                 
-            </div>
+            
             )}
             </ProductConsumer>
         )
