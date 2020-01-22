@@ -1,19 +1,18 @@
 const express = require('express');
 const app = express();
-const postsRoute = require('./routes/posts');
+const postsRoute = require('./routes/products');
 const sendMessageRoute = require('./routes/sendMessage');
+const newsRoute = require('./routes/news');
 
 app.use(express.urlencoded({
     extended: false
 }))
+
 app.use(express.json())
 
-//Middlewares, functions that executes when on a specific route
-app.use('/posts', () => {
-    console.log("This is a middleware running");
-});
+app.use('/products', postsRoute);
 
-app.use('/posts', postsRoute);
+app.use('/news', newsRoute);
 
 app.use('/send', sendMessageRoute);
 
