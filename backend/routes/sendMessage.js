@@ -8,8 +8,8 @@ var transport = {
     host: 'smtp.gmail.com', // Don’t forget to replace with the SMTP host of your provider
     port: 587,
     auth: {
-    user: process.env.USER,
-    pass: process.env.PASS
+      user: process.env.USER,
+      pass: process.env.PASS
   }
 }
 
@@ -19,7 +19,7 @@ transporter.verify((error, success) => {
   if (error) {
     console.log(error, 'here is your error');
   } else {
-    console.log('Server is ready to take messages');
+    console.log('Server is ready to take messages!');
   }
 });
 

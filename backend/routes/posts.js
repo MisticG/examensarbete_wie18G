@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const mongoose = require('mongoose');
 const Post = require('../models/Post');
+require('dotenv/config');
 
 //GET BACK ALL THE POSTS
 router.get('/', async (req, res) => {
@@ -19,8 +21,6 @@ router.get('/', async (req, res) => {
 //SUBMITS A POST
 router.post('/', async (req, res) => {
 
-    //console.log(req.body);
-
     const post = new Post({
         title: req.body.title,
         description: req.body.description
@@ -37,9 +37,17 @@ router.post('/', async (req, res) => {
 //SPECIFIC POST
 router.get('/:postId', async (req, res) => {
 
-
 })
 
-
+try {
+    mongoose.connect(
+        process.env.DB_CONNECTION,
+        {useUnifiedTopology: true, useNewUrlParser: true },
+        () => {
+        console.log("Connected to DB!");
+    });
+} catch (error) {
+    console.error(error);
+}
 
 module.exports = router;
