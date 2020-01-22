@@ -40,7 +40,7 @@ export default class About extends Component <{}, State> {
 
     handleSubmit(event: React.FormEvent) {
         event.preventDefault();
-        fetch('/sendForm', {
+        fetch('/send', {
             method: "POST",
             body: JSON.stringify(this.state),
             headers: {
