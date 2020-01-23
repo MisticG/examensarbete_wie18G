@@ -4,7 +4,7 @@ export default function CartColumns() {
     //Styla mobilt
     return (
         <div className="ui fluid container" style={{marginTop: "2em"}}>
-            <div className="ui equal width centered column grid"style={{margin: "auto"}}>
+            <div className="ui stackable six column grid"style={{margin: "auto"}}>
                 <div className="column"><h3>Produkter</h3></div>
                 <div className="column"><h3>Namn</h3></div>
                 <div className="column"><h3>Pris</h3></div>
