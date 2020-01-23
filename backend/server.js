@@ -11,17 +11,6 @@ app.use(express.urlencoded({
 
 app.use(express.json())
 
-app.use(favicon(__dirname + '/build/favicon.ico'));
-// the __dirname is the current directory from where the script is running
-app.use(express.static(__dirname));
-app.use(express.static(path.join(__dirname, 'build')));
-app.get('/ping', function (req, res) {
- return res.send('pong');
-});
-app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
-
 app.use('/products', postsRoute);
 
 app.use('/news', newsRoute);
@@ -33,8 +22,6 @@ app.get('/', (req, res) => {
     res.send('We are on home')
 });
 
-//const port = 5000;
-const port = process.env.PORT || 8080;
-
+const port = 5000;
 
 app.listen(port, () => console.log(`Server started port ${port}`));
