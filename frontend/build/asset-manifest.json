@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5d49617b.chunk.css",
+    "main.js": "/static/js/main.0a90e9cd.chunk.js",
+    "main.js.map": "/static/js/main.0a90e9cd.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.1c2d59f4.js",
+    "runtime-main.js.map": "/static/js/runtime-main.1c2d59f4.js.map",
+    "static/js/2.315ed1f1.chunk.js": "/static/js/2.315ed1f1.chunk.js",
+    "static/js/2.315ed1f1.chunk.js.map": "/static/js/2.315ed1f1.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.d3b15784a797ef233b3ea91dc0d17ace.js": "/precache-manifest.d3b15784a797ef233b3ea91dc0d17ace.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.5d49617b.chunk.css.map": "/static/css/main.5d49617b.chunk.css.map",
+    "static/js/2.315ed1f1.chunk.js.LICENSE": "/static/js/2.315ed1f1.chunk.js.LICENSE",
+    "static/media/DancingScript-Regular.ttf": "/static/media/DancingScript-Regular.20869921.ttf",
+    "static/media/Montserrat-Medium.ttf": "/static/media/Montserrat-Medium.c8b6e083.ttf",
+    "static/media/alana-harris-pink-flowers.jpg": "/static/media/alana-harris-pink-flowers.b231f837.jpg",
+    "static/media/anita-jankovic-flowers.jpg": "/static/media/anita-jankovic-flowers.84dd33b0.jpg",
+    "static/media/artsy-vibes-bunch-flowers.jpg": "/static/media/artsy-vibes-bunch-flowers.166a0204.jpg",
+    "static/media/index.css": "/static/media/bg_2.aa1bed59.jpg",
+    "static/media/border_bg.jpg": "/static/media/border_bg.e5377baf.jpg",
+    "static/media/border_bg2.jpg": "/static/media/border_bg2.e988d36a.jpg",
+    "static/media/bouquet-691862_1920.jpg": "/static/media/bouquet-691862_1920.f703ec6e.jpg",
+    "static/media/bride_bouquet.jpg": "/static/media/bride_bouquet.424e84db.jpg",
+    "static/media/bukett_1.jpg": "/static/media/bukett_1.bf7bde32.jpg",
+    "static/media/flower-393051_1920.jpg": "/static/media/flower-393051_1920.a189def5.jpg",
+    "static/media/ivan-di-tulip.jpg": "/static/media/ivan-di-tulip.27fe41f8.jpg",
+    "static/media/kelly-sikkema.jpg": "/static/media/kelly-sikkema.090e8c3b.jpg",
+    "static/media/map.jpg": "/static/media/map.84b322c8.jpg",
+    "static/media/party_flowers.jpg": "/static/media/party_flowers.b61b7da4.jpg",
+    "static/media/paula-brustur-bridal.jpg": "/static/media/paula-brustur-bridal.ec37d44b.jpg",
+    "static/media/sad.jpg": "/static/media/sad.94e15927.jpg",
+    "static/media/scotland_IoS.jpg": "/static/media/scotland_IoS.ed1e6e8d.jpg",
+    "static/media/tracey-hocking.jpg": "/static/media/tracey-hocking.41c27d8c.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1c2d59f4.js",
+    "static/js/2.315ed1f1.chunk.js",
+    "static/css/main.5d49617b.chunk.css",
+    "static/js/main.0a90e9cd.chunk.js"
+  ]
+}
