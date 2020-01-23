@@ -24,8 +24,6 @@ export default class About extends Component <{}, State> {
         this.onMessageChange = this.onMessageChange.bind(this);
     }
 
-    
-
     onNameChange = (event: React.FormEvent<HTMLInputElement>) => {
         this.setState({name: event.currentTarget.value})
     }
