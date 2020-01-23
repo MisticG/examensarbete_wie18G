@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {storeProducts, detailProduct } from './data';
+import {detailProduct } from './data';
 
 const defaultValue: any = '';
 

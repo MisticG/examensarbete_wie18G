@@ -108,4 +108,5 @@ export const detailProduct = {
     inCart: false,
     count: 0,
     total: 0
+
 };
