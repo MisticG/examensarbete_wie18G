@@ -43,7 +43,7 @@ export default class PayPalButton extends Component <Props,{}> {
         // For production app-ID:
         //   => https://developer.paypal.com/docs/classic/lifecycle/goingLive/
  
-        // NB. You can also have many Paypal express checkout buttons on page, just pass in the correct amount and they will work!
+        // NB. You can also have many Paypal express checkout buttons on page, just pass in the correct amount and they will work!ihjhkj
         return (
             <PaypalExpressBtn 
             env={env} 
