@@ -21,7 +21,7 @@ app.use('/products', postsRoute);
 
 app.use('/news', newsRoute);
 
-app.use('/send', sendMessageRoute);
+//app.use('/send', sendMessageRoute);
 
 //ROUTES
 /*app.get('/', (req, res) => {
