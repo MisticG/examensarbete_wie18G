@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {detailProduct } from './data';
+import {storeProducts, detailProduct } from './data';
 
 const defaultValue: any = '';
 
@@ -29,11 +29,13 @@ class ProductProvider extends Component {
 
     setProducts = () => {
         let tempProducts: any[] = [];
-        fetch('/products')
+        fetch('http://localhost:5000/products')
         .then(res => res.json())
         .then((res) => {
+            console.log(res)
             res.forEach( (item: any) => {
                 const singleItem = { ...item }
+                console.log(singleItem)
                 tempProducts = [...tempProducts, singleItem]
             })
             this.setState(() => {
