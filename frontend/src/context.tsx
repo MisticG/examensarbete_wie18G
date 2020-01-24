@@ -32,10 +32,8 @@ class ProductProvider extends Component {
         fetch('/products')
         .then(res => res.json())
         .then((res) => {
-            console.log(res)
             res.forEach( (item: any) => {
                 const singleItem = { ...item }
-                console.log(item._id)
                 tempProducts = [...tempProducts, singleItem]
             })
             this.setState(() => {
