@@ -4,8 +4,11 @@ const mongoose = require('mongoose');
 const postsRoute = require('./routes/products');
 const sendMessageRoute = require('./routes/sendMessage');
 //const newsRoute = require('./routes/news');
-const path = require('path')
+const path = require('path');
+const cors = require('cors');
 require('dotenv/config');
+
+app.use(cors())
 
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
