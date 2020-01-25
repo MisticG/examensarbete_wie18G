@@ -15,6 +15,8 @@ export default class Footer extends Component {
                             <h3>(Huvudentrén till Stora Coop på Backaplan.)</h3>
                         </div>
                         <div className="column">
+                                <h3>Måndag - lördag <br></br> 10 - 19 <br></br>
+                                Söndag <br></br> 11 - 17</h3>
                             <img src={fbLogo} style={{display: "flex", width: "15%"}}></img>
                             <button style={buttonStylezz} className="ui button">Kontakta oss</button>
                         </div>

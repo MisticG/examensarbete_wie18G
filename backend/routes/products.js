@@ -1,19 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const mongoose = require('mongoose');
 const Post = require('../models/post');
 require('dotenv/config');
-
-try {
-    mongoose.connect(
-        process.env.DB_PRODUCTS,
-        {useUnifiedTopology: true, useNewUrlParser: true },
-        () => {
-        console.log("Connected to DB_PRODUCTS!");
-    });
-} catch (error) {
-    console.error(error);
-}
 
 //GET BACK ALL THE POSTS
 router.get('/', async (req, res) => {

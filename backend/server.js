@@ -1,19 +1,29 @@
 const express = require('express');
 const app = express();
+const mongoose = require('mongoose');
 const postsRoute = require('./routes/products');
 const sendMessageRoute = require('./routes/sendMessage');
-const newsRoute = require('./routes/news');
+//const newsRoute = require('./routes/news');
 const path = require('path')
+require('dotenv/config');
 
-app.use(express.urlencoded({
-    extended: false
-}))
-
+app.use(express.urlencoded({extended: false}))
 app.use(express.json())
+
+try {
+    mongoose.connect(
+        process.env.DB_PRODUCTS,
+        {useUnifiedTopology: true, useNewUrlParser: true },
+        () => {
+        console.log("Connected to DB_PRODUCTS!");
+    });
+} catch (error) {
+    console.error(error);
+}
 
 app.use('/products', postsRoute);
 
-app.use('/news', newsRoute);
+//app.use('/news', newsRoute);
 
 app.use('/send', sendMessageRoute);
 
