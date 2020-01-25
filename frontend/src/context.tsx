@@ -21,21 +21,13 @@ class ProductProvider extends Component {
         this.setProducts();
     }
 
-    /*getProducts = () => {
-        fetch('/posts')
-        .then(res => res.json())
-        .then(products => this.setState({products}, () => console.log('customers fetched..', products)))
-    }*/
-
     setProducts = () => {
         let tempProducts: any[] = [];
         fetch('http://www.backablommor.se/products')
         .then(res => res.json())
         .then((res) => {
-            console.log(res)
             res.forEach( (item: any) => {
                 const singleItem = { ...item }
-                console.log(singleItem)
                 tempProducts = [...tempProducts, singleItem]
             })
             this.setState(() => {
