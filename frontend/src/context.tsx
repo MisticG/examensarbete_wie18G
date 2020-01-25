@@ -29,7 +29,7 @@ class ProductProvider extends Component {
 
     setProducts = () => {
         let tempProducts: any[] = [];
-        fetch('http://134.209.177.36:5000/products')
+        fetch('http://www.backablommor.se/products')
         .then(res => res.json())
         .then((res) => {
             console.log(res)
