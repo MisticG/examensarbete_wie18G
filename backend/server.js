@@ -36,7 +36,7 @@ app.get('*', function(req, res) {
   res.set('Content-Type', 'text/css');
 });
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 80;
 
 app.listen(port, () => console.log(`Server started port ${port}`));
 
