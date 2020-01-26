@@ -22,7 +22,7 @@ export default class About extends Component {
                         </FadeIn>
                     </div>
                     <div className="ui container" style={{marginTop: "4em", marginBottom: "4em"}}>
-                        <h1>Öppettider och besöksadress</h1>
+                        <h1 style={{marginBottom: "1em"}}>Öppettider och besöksadress</h1>
                         <FadeIn delay={200} transitionDuration={1000}>
                             <div className="ui stackable two column grid" style={{justifyContent: "center"}} >
                                 <div className="column" style={{textAlign: "left"}}>

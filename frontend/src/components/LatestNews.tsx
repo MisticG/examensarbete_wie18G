@@ -1,26 +1,27 @@
 import React, { Component } from 'react';
 import newsImg from '../assets/images/bukett_1.jpg';
-//import MediaQuery from 'react-responsive';
+import { Link } from 'react-router-dom';
 
 export default class LatestNews extends Component {
+  
+    text = "Välkommen till Backa Blommor! Vi har precis lanserat vår nya webbsida på nätet. Har du några frågor så hör gärna av dig till oss på"
     
-    text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error nihil assumenda magnam nesciunt rerum beatae adipisci consequatur inventore nisi exercitationem. Impedit veritatis ex nulla! Atque dignissimos quis error dolor ex!"
     render() {
         return (
             <div className="section latestNews" style={outer}>
                 <div style={news}>
-                    <h1>Senaste nytt i butiken</h1>
+                    <h1 style={{marginBottom: "1em"}}>Senaste nytt i butiken</h1>
                     <div className="ui stackable two column grid">
                         <div className="column" style={{textAlign: "left"}}>
-                            <p>{this.text} <br></br> {this.text} <br></br> {this.text}</p> 
+                            <h3>{this.text} <Link to="/contact">kontaktsidan</Link> </h3> 
                         </div>
                         <div className="column">
                             <img src={newsImg} style={imgStyle} alt="big ass bouquet"/>
                         </div>
                     </div>
-                    <div>
+                    {/*<div>
                         <a style={{cursor: "pointer"}}><h2 style={{fontSize: "2em", marginTop: "2em"}}>Se flera inlägg...</h2></a>
-                    </div>
+                    </div>*/}
                 </div>
             </div>
         )
@@ -36,7 +37,7 @@ const news: React.CSSProperties = {
 }
 
 const imgStyle: React.CSSProperties = {
-    width: "100%",
+    width: "80%",
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat"

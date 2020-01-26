@@ -48,7 +48,7 @@ export default class About extends Component <{}, State> {
         }).then(res => res.json())
         .then(res => {
             if(res.status === 'success') {
-                alert("Message sent")
+                alert("Ditt meddelande har skickats!")
                 this.resetForm()
             } else if (res.status === 'fail') {
                 alert("Message failed to send.")
@@ -83,7 +83,7 @@ export default class About extends Component <{}, State> {
                                         <label><h3>Ditt meddelande</h3></label>
                                         <textarea value={this.state.message} onChange={this.onMessageChange.bind(this)}></textarea>
                                     </div>
-                                    <button className="ui green button" type="submit">Submit</button>
+                                    <button className="ui green button" type="submit">Skicka</button>
                                 </div>
                             </FadeIn>
                         </form>                        

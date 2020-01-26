@@ -12,6 +12,7 @@ import Modal from './components/Modal';
 import Default from './components/Default';
 import MediaQuery from 'react-responsive';
 import SideBar from './components/Sidebar';
+import ThankYou from './components/ThankYou';
 
 interface State {
     visible: boolean
@@ -86,6 +87,9 @@ export default class App extends Component <{}, State> {
                     </Route>
                     <Route path="/details">
                         <ProductDetails />
+                    </Route>
+                    <Route path="/thankyou">
+                        <ThankYou />
                     </Route>
                     <Route>
                         <Default />
