@@ -23,7 +23,7 @@ class ProductProvider extends Component {
 
     setProducts = () => {
         let tempProducts: any[] = [];
-        fetch('http://www.backablommor.se/products')
+        fetch('https://www.backablommor.se/products')
         .then(res => res.json())
         .then((res) => {
             res.forEach( (item: any) => {
