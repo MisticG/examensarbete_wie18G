@@ -30,7 +30,7 @@ app.use('/products', postsRoute);
 
 app.use('/send', sendMessageRoute);
 
-//Telling the server to route to the file index.html in "build" folder
+//Telling the server to use index.html in "build" folder
 app.use(express.static(path.join(__dirname.replace("backend", ''), 'frontend/build')));
 
 app.get('*', function(req, res) {

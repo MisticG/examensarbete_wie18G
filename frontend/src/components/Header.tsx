@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../css/header.css';
 import FadeIn from 'react-fade-in';
+import { Link } from 'react-router-dom';
 
 export default class Header extends Component {
 
@@ -18,7 +19,7 @@ export default class Header extends Component {
                                 Blommor    
                             </div>
                             <div className="column headerStyle2">
-                                <button style={buttonStyle} className="ui button">Kontakta oss</button>
+                            <Link to="/contact"><button style={buttonStyle} className="ui button">Kontakta oss</button></Link>
                             </div>                   
                         </div>
                         </FadeIn> 

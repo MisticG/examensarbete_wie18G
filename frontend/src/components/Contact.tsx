@@ -67,7 +67,8 @@ export default class About extends Component <{}, State> {
                 <div className="section" style={outer}>
                     <div className="ui container" style={{marginTop: "4em", marginBottom: "4em"}}>
                         <form className="ui form section" onSubmit={this.handleSubmit.bind(this)} style={outer}>
-                            <h1>Kontaktformulär</h1>
+                            <h1>Kontakt</h1>
+                            <h3 style={{marginBottom: "2em"}}>Har du frågor? Skriv här så hör vi av oss!  <i className="paper plane icon" /></h3>
                             <FadeIn delay={200} transitionDuration={1000}>
                                 <div style={{textAlign: "left"}}>
                                     <div className="field">

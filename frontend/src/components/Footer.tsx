@@ -1,24 +1,26 @@
 import React, { Component } from 'react';
 import fbLogo from '../assets/images/logos/facebook-logo.png';
+import { Link } from 'react-router-dom';
 
 export default class Footer extends Component {
     render() {
         return (
             <div style={footerStyle}>
                 <div className="ui container"  >
-                    <div className="ui stackable two column grid" style={{justifyContent: "center"}} >
-                        <h2 style={{fontSize: "3em"}}>Vi har öppet 365 dagar om året!</h2>
+                        <div className="ui stackable three column grid" style={{justifyContent: "center"}} >
                         <div className="column" >
                             <h3>Backa Blommor<br></br>
                             Backavägen 2 <br></br>
-                            41705 Göteborg</h3> <br></br>
+                            41705 Göteborg</h3> 
                             <h3>(Huvudentrén till Stora Coop på Backaplan.)</h3>
                         </div>
                         <div className="column">
                                 <h3>Måndag - lördag <br></br> 10 - 19 <br></br>
                                 Söndag <br></br> 11 - 17</h3>
-                            <img src={fbLogo} style={{display: "flex", width: "15%"}}></img>
-                            <button style={buttonStylezz} className="ui button">Kontakta oss</button>
+                        </div>
+                        <div className="column"> 
+                            <a href="https://www.facebook.com/backablommor/"><img src={fbLogo} style={{display: "flex", width: "15%"}}></img></a>
+                            <Link to="/contact"><button style={buttonStylezz} className="ui button">Kontakta oss</button></Link>
                         </div>
                     </div>
                 </div>
