@@ -10,7 +10,7 @@ export default class PayPalButton extends Component <Props,{}> {
     render() {
         const onSuccess = (payment: any) => {
             // Congratulation, it came here means everything's fine!
-                    console.log("The payment was succeeded!", payment);
+                    console.log("The payment was succeeded!");
                     this.props.clearCart();
             		// You can bind the "payment" object's value to your state or props or whatever here, please see below for sample returned data
         }
