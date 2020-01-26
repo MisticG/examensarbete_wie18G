@@ -10,26 +10,61 @@ import { ProductProvider } from './context'
 import ProductDetails from './components/ProductDetails';
 import Modal from './components/Modal';
 import Default from './components/Default';
+import MediaQuery from 'react-responsive';
+import SideBar from './components/Sidebar';
 
-export default class App extends Component {
+interface State {
+    visible: boolean
+}
+
+export default class App extends Component <{}, State> {
+    constructor(props: {}) {
+        super(props);
+
+        this.state = {
+            visible: false
+        };
+
+        this.toggleMenu = this.toggleMenu.bind(this);
+    }
+    
+    toggleMenu() {
+        this.setState({visible: !this.state.visible})
+    }
+   
     render() {
+       
         return (
             <ProductProvider>
             <Router>
+                
+                    <div className="sticky">    
+                        <div className="ui container center aligned numb" style={{marginTop: "1em", marginBottom: "1em"}}>
+                            <SideBar 
+                                toggleMenu={this.toggleMenu}
+                                showSideBar={this.state.visible}    
+                            />
+                        </div>
+                    </div>
+               
+                <MediaQuery minWidth={851}>
                 <div className="sticky">
                     <div className="ui container center aligned">
-                        <div className="ui five big item secondary menu container" style={naviStyle}>
+                        <div className="ui five big item secondary menu container" style={naviStyle} >
+                    
                             <Link to="/" className="item">HEM</Link>
                             <Link to="/gallery" className="item">GALLERI</Link>
                             <Link to="/about" className="item">OM OSS</Link>
                             <Link to="/contact" className="item">KONTAKT</Link>
-                            <Link to="/products" className="item">TJÄNSTER & UTBUD</Link>
+                            <Link to="/products" className="item">BLOMMOR</Link>
                             <Link to="/cart" className="item"><i className="shipping fast icon"></i> </Link>
+                    
                         </div>
                     </div>
                 </div>
+                </MediaQuery>
                 <Modal /> 
-                {/*Städa upp i route */}
+        
                 <Switch>
                     <Route exact path="/">
                         <Main />
@@ -56,7 +91,6 @@ export default class App extends Component {
                         <Default />
                     </Route>
                 </Switch>
-                
             </Router>
             </ProductProvider>
         );

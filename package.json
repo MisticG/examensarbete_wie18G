@@ -35,7 +35,7 @@
     "path": "^0.12.7",
     "react-fade-in": "^0.1.7",
     "react-paypal-express-checkout": "^1.0.5",
-    "react-responsive": "^8.0.1",
+    "react-responsive": "^8.0.3",
     "react-router-dom": "^5.1.2"
   },
   "devDependencies": {

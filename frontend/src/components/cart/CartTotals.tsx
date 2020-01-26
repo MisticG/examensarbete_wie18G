@@ -14,10 +14,10 @@ export default function cartTotals({value}: {value:any}) {
                         <button className="ui red button" onClick={() => clearCart()}>Töm kundvagnen</button>
                     </Link>
                 </div>
-                <div className="row"><h3>Summa: </h3>{cartSubTotal}</div>
-                <div className="row"><h3>Moms: </h3>{cartTax}</div>
-                <div className="row"><h3>Total summa: </h3>{cartTotal}</div>
-                <PayPalButton total={cartTotal} clearCart={clearCart}/>
+                <div className="row"><h3>Summa: {cartSubTotal} Kr</h3></div>
+                <div className="row"><h3>Varav moms: {cartTax} Kr</h3></div>
+                <div className="row"><h3>Total summa: {cartTotal} Kr</h3></div>
+                <PayPalButton total={cartTotal} clearCart={clearCart} />
             </div>
         
         </div>

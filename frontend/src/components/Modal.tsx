@@ -8,29 +8,30 @@ export default class Modal extends Component {
             <ProductConsumer>
                 {(value) => {
                     const {modalOpen, closeModal} = value;
-                    const {img, title, price} = value.modalProduct;
+                    const { title, price } = value.modalProduct;
 
                     if(!modalOpen) {
                         return null;
                     } else {
                         return (
-                        <div id="modal" className="ui modal" style={modalStyle}>
-                            <div className="header">{title}</div>
-                            <div className="image content">
-                                <img src={img} className="image"/>
-                                <div className="description">
-                                    <p>Pris: {price}Kr</p>
-                                    <h2>Item added to cart</h2>
+                            <div id="modal" className="ui mini modal" style={modalStyle}>
+                                <div className="header">Dina valda blommor är tillagda
+                                </div>
+                                <div className="header">
+                                    <h3>{title}</h3>
+                                    <h3>Pris: {price}Kr</h3>
+                                </div>
+                                <div className="content">
                                     <Link to="/products">
-                                        <button className="ui blue button" onClick={() => closeModal()}>Continue shopping</button>
-                                    </Link>
-                                    <Link to="/cart">
-                                        <button className="ui blue button" onClick={() => closeModal()}>Go to Cart</button>
+                                        <button className="ui orange button" onClick={() => closeModal()}>Tillbaka</button>
                                     </Link>
                                 </div>
-                            </div>
-                            
-                        </div>
+                                <div className="content">
+                                    <Link to="/cart">
+                                        <button className="ui green button" onClick={() => closeModal()}>Till kundvagn</button>
+                                    </Link>
+                                </div>
+                            </div>      
                         )
                     }
                 }}
@@ -40,10 +41,10 @@ export default class Modal extends Component {
 }
 
 const modalStyle: React.CSSProperties = {
-        display: "inline-block",
-        width: "50%",
-        height: "50%",
-        position: "fixed", 
-        top: "calc(50% - 25%)", // half of width
-        left: "calc(50% - 25%)" // half of height
+    display: "inline-block",
+    width: "50%",
+    height: "50%",
+    position: "fixed", 
+    top: "calc(50% - 25%)", // half of width
+    left: "calc(50% - 25%)" // half of height
 }

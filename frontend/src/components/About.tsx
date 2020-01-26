@@ -8,8 +8,7 @@ import FadeIn from 'react-fade-in';
 import { Link } from 'react-router-dom';
 
 export default class About extends Component {
-    text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque asperiores debitis omnis perferendis? Provident libero pariatur nisi! Esse fuga quibusdam natus accusantium voluptate. Blanditiis, similique! Quia quae cupiditate natus in."
-
+    text = 'Alla hjärtans dag år 2014 öppnade vi upp för vår blombutik i centrala Hisingen, vid ingången till Stora Coop. Som ett litet familjeföretag strävar vi efter att alltid kunna erbjuda kunden den bästa servicen och prisvärda blommor. Hos oss hittar ni både färdiga buketter och arrangemang men även beställningar efter önskemål. Välkomna in! '
     render() {
         return (
             <div>
@@ -18,7 +17,7 @@ export default class About extends Component {
                         <h1>Om oss</h1>
                         <FadeIn delay={200} transitionDuration={1000}>
                         <div>
-                        <ColumnLeft text={this.text} image={IsleofSky} altText="Isle of sky"/> 
+                        <ColumnLeft headerText={''} text={this.text} image={IsleofSky} altText="Isle of sky"/> 
                         </div>
                         </FadeIn>
                     </div>
@@ -27,7 +26,7 @@ export default class About extends Component {
                         <FadeIn delay={200} transitionDuration={1000}>
                             <div className="ui stackable two column grid" style={{justifyContent: "center"}} >
                                 <div className="column" style={{textAlign: "left"}}>
-                                <h3> Besöksadress: Backavägen 2, Göteborg. (Entrén till Stora Coop) <br></br>
+                                <h3>Backavägen 2, Göteborg. (Entrén till Stora Coop) <br></br>
                                 <br></br>
                                     Måndag - lördag <br></br> 10 - 19 <br></br>
                                     Söndag <br></br> 11 - 17</h3>
@@ -44,10 +43,6 @@ export default class About extends Component {
             </div>
         )
     }
-
-  
-
-
 }
 
 const outer: React.CSSProperties = {

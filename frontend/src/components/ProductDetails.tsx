@@ -1,38 +1,51 @@
 import React, { Component } from 'react';
 import { ProductConsumer } from '../context';
 import { Link } from 'react-router-dom';
+import ColumnRight from './ColumnRight';
+import Footer from './Footer';
 
 export default class ProductDetails extends Component {
     render() {
         return(
             <ProductConsumer>
                 {value => {
-                    const { _id, img, info, price, title, inCart } =
+                    const { _id, img, info, title, inCart } = 
                     value.detailProduct;
                     return (
-                        <div style={{marginTop: "5em", textAlign: "center"}} className="ui container">
-                            <h1>{title}</h1>
-                            <div>
-                                <Link to="/products">
-                                    <button className="ui green button">Back to products</button>
-                                </Link>
+                        <div>
+                        <div className="section" style={outer}>
+                            <div className="ui container" style={{marginTop: "4em", marginBottom: "4em", textAlign: "center"}}>
+                                <ColumnRight 
+                                headerText={title}
+                                image={img}
+                                text={info}
+                                altText='produktbild'
+                                />
                             </div>
-                            <div>
-                            
-                            <button className="ui blue button" disabled={inCart? true : false}
-                            onClick={() => {
-                                value.addToCart(_id);
-                                value.openModal(_id);
-                                }}>Add to cart</button>
-                            
+                            <div className="ui stackable two column grid container">
+                                <div className="column">
+                                    <Link to="/products">
+                                        <button className="ui orange button">Tillbaka</button>
+                                    </Link>
+                                </div>
+                                <div className="column">
+                                    <button className="ui green button" disabled={inCart? true : false}
+                                    onClick={() => {
+                                        value.addToCart(_id);
+                                        value.openModal(_id);
+                                    }}>Lägg till i kundvagn</button>
+                                </div>
                             </div>
-                            <img className="ui image" src={img} alt="product"/>
-                            <h2>Price: {price}</h2>
-                            <h2> Description: {info}</h2>
                         </div>
+                        <Footer />
+                    </div>
                     )
                 }}
             </ProductConsumer>
         )
     }
+}
+
+const outer: React.CSSProperties = {
+    boxShadow: "0px 5px 5px rgba(0, 0, 0, 0.25)"
 }
