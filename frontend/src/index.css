@@ -95,9 +95,11 @@ h3 {
   .form.section {
     margin: 0;
   }
+
 }
 
 @media(max-width: 700px) {
+  
   .section {
     margin: 0.7em 1em;
     padding: 1em 1em 3em;
@@ -109,6 +111,10 @@ h3 {
   
   .header_text {
     font-size: 4em;
+  }
+
+  .aligned.numb {
+    margin-bottom: 0 !important
   }
 }
 

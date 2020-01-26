@@ -11,10 +11,10 @@ import ProductDetails from './components/ProductDetails';
 import Modal from './components/Modal';
 import Default from './components/Default';
 import MediaQuery from 'react-responsive';
+import SideBar from './components/Sidebar';
 
 interface State {
     visible: boolean
-    
 }
 
 export default class App extends Component <{}, State> {
@@ -22,14 +22,13 @@ export default class App extends Component <{}, State> {
         super(props);
 
         this.state = {
-            visible: false,
-            
+            visible: false
         };
 
         this.toggleMenu = this.toggleMenu.bind(this);
     }
     
-    toggleMenu(e: React.FormEvent) {
+    toggleMenu() {
         this.setState({visible: !this.state.visible})
     }
    
@@ -38,23 +37,16 @@ export default class App extends Component <{}, State> {
         return (
             <ProductProvider>
             <Router>
-                <MediaQuery maxDeviceWidth={850}>
+                
                     <div className="sticky">    
-                        <div className="ui container center aligned" style={{marginTop: "1em", marginBottom: "1em"}}>
-                            <i className="bars icon" onClick={this.toggleMenu}/>
-                            {this.state.visible && 
-                            <div style={{width: "100%", marginTop: "1em"}}>
-                                <h3 ><Link to="/" className="item" style={{color: "black"}}>HEM</Link></h3>
-                                <h3><Link to="/gallery" className="item" style={{color: "black"}}>GALLERI</Link></h3>
-                                <h3><Link to="/about" className="item" style={{color: "black"}}>OM OSS</Link></h3>
-                                <h3><Link to="/contact" className="item" style={{color: "black"}}>KONTAKT</Link></h3>
-                                <h3><Link to="/products" className="item" style={{color: "black"}}>BLOMMOR</Link></h3>
-                                <h3><Link to="/cart" className="item" style={{color: "black"}}><i className="shipping fast icon"></i> </Link></h3>
-                            </div>}
-                            
+                        <div className="ui container center aligned numb" style={{marginTop: "1em", marginBottom: "1em"}}>
+                            <SideBar 
+                                toggleMenu={this.toggleMenu}
+                                showSideBar={this.state.visible}    
+                            />
                         </div>
                     </div>
-                </MediaQuery>
+               
                 <MediaQuery minWidth={851}>
                 <div className="sticky">
                     <div className="ui container center aligned">
