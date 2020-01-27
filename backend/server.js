@@ -51,7 +51,7 @@ app.get('/*', function(req, res) {
     
   res.sendFile(path.join(__dirname.replace("backend", '') + '/frontend/build/index.html'));
   console.log(res)
-  res.set('Content-Type', 'text/css');
+  //res.set('Content-Type', 'text/css');
   if(err) {
       res.status(500).send(err)
     }
