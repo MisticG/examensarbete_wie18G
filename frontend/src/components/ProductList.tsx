@@ -14,6 +14,7 @@ export default class Products extends Component <{}> {
                     <div className="ui container" style={{marginTop: "4em", marginBottom: "4em", textAlign: "center"}}>
                     <h1>Blommor</h1>
                     <h3 style={{marginBottom: "3em"}}>Här erbjuder vi det som finns online hos oss just nu!</h3>
+                    <b><h3>(Obs! Endast testversion! Ej riktiga varor!)</h3></b>
                     <FadeIn delay={200} transitionDuration={1000}>
                     <div className="ui stackable three column grid">
                         <ProductConsumer>
