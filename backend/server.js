@@ -47,10 +47,13 @@ app.use('/send', sendMessageRoute);
 //Telling the server to use index.html in "build" folder
 app.use(express.static(path.join(__dirname.replace("backend", ''), 'frontend/build')));
 
-app.get('*', function(req, res) {
+app.get('/*', function(req, res) {
     
   res.sendFile(path.join(__dirname.replace("backend", '') + '/frontend/build/index.html'));
   res.set('Content-Type', 'text/css');
+  if(err) {
+      res.status(500).send(err)
+    }
 });
 
 // Starting https server
