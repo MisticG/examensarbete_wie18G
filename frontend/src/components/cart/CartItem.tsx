@@ -15,9 +15,9 @@ export default function CartItem({item, value}: {item: any, value:any}) {
                 </div>
                 <div className="column">
                     <div className="ui stackable three column grid" style={{justifyContent: "center"}}>
-                        <h3 style={{marginTop: "1.5em"}}><span className="column" onClick={() => increment(_id)}><strong style={{fontSize: "1em", cursor: 'pointer'}}>+</strong></span></h3>
+                        <h3 style={{marginTop: "1.5em"}}><span className="column" onClick={() => decrement(_id)}><strong style={{fontSize: "1em", cursor: 'pointer'}}>-</strong></span></h3>
                         <h3><span className="column">{count}</span></h3>
-                        <h3><span className="column" onClick={() => decrement(_id)}><strong style={{fontSize: "1em", cursor: 'pointer'}}>-</strong></span></h3>
+                        <h3><span className="column" onClick={() => increment(_id)}><strong style={{fontSize: "1em", cursor: 'pointer'}}>+</strong></span></h3>
                     </div>
                 </div>
                 <div className="column" onClick={() => {removeItem(_id)}}><i style={{fontSize: "1.5em"}} className="trash alternate icon"></i></div>
