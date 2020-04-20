@@ -22,6 +22,7 @@ transporter.verify((error, success) => {
     console.log('Server is ready to take messages!');
   }
 });
+console.log(transporter)
 
 routeSendMessage.post('/', (req, res, next) => {
   var name = req.body.name
