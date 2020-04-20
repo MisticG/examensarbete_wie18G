@@ -43,6 +43,7 @@ app.use('/products', postsRoute);
 //app.use('/news', newsRoute);
 
 app.use('/send', sendMessageRoute);
+console.log('shit is sent?', sendMessageRoute)
 
 //Telling the server to use index.html in "build" folder
 app.use(express.static(path.join(__dirname.replace("backend", '') + '/frontend/build')));
