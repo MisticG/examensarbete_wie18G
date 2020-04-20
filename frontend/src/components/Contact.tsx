@@ -47,7 +47,6 @@ export default class About extends Component <{}, State> {
             },
         }).then(res => res.json())
         .then(res => {
-            console.log(res)
             if(res.status === 'success') {
                 alert("Ditt meddelande har skickats!")
                 this.resetForm()
